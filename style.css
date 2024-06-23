@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+}
+nav {
+    background: #ffffff;
+    padding: 5px 20px;
+}
+ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.logo a:hover {
+    text-decoration: none;
+}
+.logo img {
+    height: 50px; 
+    width: auto;
+}
+.menu li {
+    font-size: 16px;
+    padding: 10px 20px; 
+    margin: 0 15px; 
+}
+.item.button {
+    padding: 0;
+    margin-left: auto; 
+}
+.item a {
+    padding: 7.5px 15px;
+}
+.button a {
+    background: #022F40;
+    color: white;
+    border: 1px solid #022F40;
+    border-radius: 50em;
+}
+.button a:hover {
+    text-decoration: none;
+    background: #03506f; 
+    transition: all 0.25s;
+}
+
+/* Mobile menu */
+.menu {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item {
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+.item.active {
+    display: block;
+}
+
+/* Navbar Toggle */
+.toggle {
+    cursor: pointer;
+}
+.bars {
+    background: #999;
+    display: inline-block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+.bars:before,
+.bars:after {
+    background: #999;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+.bars:before {
+    top: 5px;
+}
+.bars:after {
+    top: -5px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 468px) {
+    .menu {
+        justify-content: center;
+    }
+    .logo {
+        flex: 1;
+    }
+    .item {
+        display: block;
+        width: auto;
+    }
+    .button {
+        margin-left: 20px;
+    }
+    .button a {
+        padding: 7.5px 15px;
+    }
+}
+
+/* Desktop menu */
+@media all and (min-width: 768px) {
+    .item {
+        display: block;
+        width: auto;
+    }
+    .toggle {
+        display: none;
+    }
+    .logo {
+        order: 0;
+    }
+    .item {
+        order: 1;
+    }
+    .button {
+        order: 2;
+        margin-left: 20px;
+    }
+    .menu li {
+        padding: 15px 10px;
+    }
+}
+.container {
+    text-align: center;  
+    background-image: url('./assets/Desktop\ -\ 3.svg');
+    background-repeat: repeat;
+    padding: 80px 110px; 
+    background-color: #ffffff;
+    max-width: auto;  
+}
+
+p {
+    color: #000;
+    font-family: Montserrat;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal; 
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+.highlight-red {
+    color: #EC4E20;
+    font-family: Montserrat;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal; 
+}
